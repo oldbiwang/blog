@@ -1,25 +1,11 @@
-Gradle - Spring 4 MVC Hello World
+这次提交springmvc整合了mybatis还有shiro框架，
+利用shiro验证登陆的功能
 
-Template for Spring 4 MVC + JSP view + XML configuration, using Gradle build tool.
+1. 先创建对应的数据库和表，库名是db_blog
+表名是t_blogger,具体视适合的情况为主
 
-1. Technologies used
+$ git clone https://github.com/oldbiwang/blog.git
 
-Gradle 2.0
-Spring 4.1.6.RELEASE
-JSTL 1.2
-Logback 1.1.3
-Boostrap 3
-2. To Run this project locally
-
-$ git clone https://github.com/mkyong/spring4-mvc-gradle-xml-hello-world
+2. 运行
 $ gradle jettyRun
-Access http://localhost:8080/spring4
-
-3. To import this project into Eclipse IDE
-
-$ gradle eclipse
-Import into Eclipse via existing projects into workspace option.
-Done.
-4. Project Demo
-
-Please refer to this article Gradle - Spring 4 MVC Hello World
+Access http://localhost:8080/blog

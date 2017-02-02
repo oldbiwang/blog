@@ -3,7 +3,7 @@ apply plugin: 'war'
 apply plugin: 'eclipse-wtp'
 apply plugin: 'jetty'
 
-// JDK 7
+// JDK 8
 sourceCompatibility = 1.8
 targetCompatibility = 1.8
 
@@ -16,9 +16,32 @@ dependencies {
 
 	compile 'ch.qos.logback:logback-classic:1.1.3'
 	compile 'org.springframework:spring-webmvc:4.1.6.RELEASE'
-	compile 'javax.servlet:jstl:1.2'
+	compile 'org.springframework:spring-aspects:4.1.6.RELEASE'
+	compile group: 'org.springframework', name: 'spring-context', version: '4.1.6.RELEASE'
+	compile group: 'org.springframework', name: 'spring-beans', version: '4.1.6.RELEASE'
 
+	compile group: 'org.springframework', name: 'spring-jdbc', version: '4.1.6.RELEASE'
+	compile group: 'org.springframework', name: 'spring-tx', version: '4.1.6.RELEASE'
+	
+
+	compile 'javax.servlet:jstl:1.2'
+	compile group: 'javax.servlet', name: 'javax.servlet-api', version: '3.1.0'
+	
+	compile 'org.mybatis:mybatis:3.4.2'
+	compile 'org.mybatis:mybatis-spring:1.3.1'
+	compile group: 'com.alibaba', name: 'druid', version: '1.0.16'
+	compile group: 'mysql', name: 'mysql-connector-java', version: '5.1.30'
+
+	compile group: 'org.apache.shiro', name: 'shiro-core', version: '1.2.5'
+	compile group: 'org.apache.shiro', name: 'shiro-spring', version: '1.2.5'	
+	compile group: 'org.apache.shiro', name: 'shiro-web', version: '1.2.5'
+	
+	compile group: 'commons-fileupload', name: 'commons-fileupload', version: '1.3.2'
+
+	
 }
+
+[compileJava,compileTestJava]*.options*.encoding = 'UTF-8'
 
 // Embeded Jetty for testing
 jettyRun{
@@ -44,13 +67,6 @@ eclipse {
 
 	}
 }
-	//compile 'org.mybatis:mybatis:3.4.2'
-	//compile 'org.mybatis:mybatis-spring:1.3.1'
-	//compile group: 'com.alibaba', name: 'druid', version: '1.0.16'
-//	compile group: 'mysql', name: 'mysql-connector-java', version: '5.1.30'
-
-	//compile group: 'org.apache.shiro', name: 'shiro-core', version: '1.2.5'
-	//compile group: 'org.apache.shiro', name: 'shiro-web', version: '1.2.5'
-	//compile group: 'org.apache.shiro', name: 'shiro-spring', version: '1.2.5'
+	
 
 

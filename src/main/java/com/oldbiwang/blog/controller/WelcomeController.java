@@ -34,6 +34,17 @@ public class WelcomeController {
 
         return "index";
     }
+	
+	@RequestMapping(value = "/login", method = RequestMethod.GET)
+    public String login(Map<String, Object> model) {
+
+        logger.debug("login() is executed!");
+
+     //   model.put("title", helloWorldService.getTitle(""));
+     //   model.put("msg", helloWorldService.getDesc());
+
+        return "login";
+    }
 
     @RequestMapping(value = "/hello/{name:.+}", method = RequestMethod.GET)
     public ModelAndView hello(@PathVariable("name") String name) {
