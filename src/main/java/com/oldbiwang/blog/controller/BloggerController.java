@@ -35,16 +35,15 @@ public class BloggerController {
 		UsernamePasswordToken token = new UsernamePasswordToken(blogger.getUsername(), newPassword);
 		System.out.println("subject=======>" + subject);
 		try {
-			subject.login(token);
-			System.out.println("continue");
- 			//会调用MyRealm中的doGetAuthenticationInfo方法进行身份认证
-			return "admin/main";
+				subject.login(token);
+				System.out.println("continue");
+				//会调用MyRealm中的doGetAuthenticationInfo方法进行身份认证
+				return "admin/main";
 		} catch (AuthenticationException e) {
-			e.printStackTrace();
-			request.setAttribute("errorInfo", "用户名或密码错误");
-			System.out.println("login error");
-			return "login";
+				e.printStackTrace();
+				request.setAttribute("errorInfo", "用户名或密码错误");
+				System.out.println("login error");
+				return "login";
 		} 
-
 	}
 }

@@ -24,18 +24,18 @@ public class WelcomeController {
         this.helloWorldService = helloWorldService;
     }
 
-    @RequestMapping(value = "/", method = RequestMethod.GET)
+    @RequestMapping("/")
     public String index(Map<String, Object> model) {
 
         logger.debug("index() is executed!");
 
-        model.put("title", helloWorldService.getTitle(""));
-        model.put("msg", helloWorldService.getDesc());
-
+  //      model.put("title", helloWorldService.getTitle(""));
+   //     model.put("msg", helloWorldService.getDesc());
+        System.out.println("======================test3 r=====================");
         return "index";
     }
 	
-	@RequestMapping(value = "/login", method = RequestMethod.GET)
+	@RequestMapping("/login")
     public String login(Map<String, Object> model) {
 
         logger.debug("login() is executed!");
@@ -46,7 +46,7 @@ public class WelcomeController {
         return "login";
     }
 
-    @RequestMapping(value = "/hello/{name:.+}", method = RequestMethod.GET)
+    @RequestMapping("/hello/{name:.+}")
     public ModelAndView hello(@PathVariable("name") String name) {
 
         logger.debug("hello() is executed - $name {}", name);

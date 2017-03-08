@@ -11,5 +11,5 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 @RequestMapping("/admin/blogger")
 public class BloggerAdminController {
-
+	
 }

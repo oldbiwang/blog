@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>Gradle + Spring MVC</title>
+<title>Spring MVC blog</title>
 
 <spring:url value="/resources/core/css/hello.css" var="coreCss" />
 <spring:url value="/resources/core/css/bootstrap.min.css" var="bootstrapCss" />
@@ -14,7 +14,7 @@
 <nav class="navbar navbar-inverse navbar-fixed-top">
 	<div class="container">
 		<div class="navbar-header">
-			<a class="navbar-brand" href="#">Project Name</a>
+			<a class="navbar-brand" href="#">oldbiwang'blog</a>
 		</div>
 	</div>
 </nav>
@@ -28,11 +28,11 @@
 			</c:if>
 
 			<c:if test="${empty msg}">
-				Welcome Welcome!
+				Welcome!
 			</c:if>
 		</p>
 		<p>
-			<a class="btn btn-primary btn-lg" href="login.jsp" role="button">Login</a>
+			<a class="btn btn-primary btn-lg" href="login" role="button">Login</a>
 		</p>
 	</div>
 </div>
@@ -41,32 +41,30 @@
 
 	<div class="row">
 		<div class="col-md-4">
-			<h2>Heading</h2>
-			<p>ABC</p>
+			<h2>Java</h2>
+			<p>^-^</p>
 			<p>
 				<a class="btn btn-default" href="#" role="button">View details</a>
 			</p>
 		</div>
 		<div class="col-md-4">
-			<h2>Heading</h2>
-			<p>ABC</p>
+			<h2>C</h2>
+			<p>-_-</p>
 			<p>
 				<a class="btn btn-default" href="#" role="button">View details</a>
 			</p>
 		</div>
 		<div class="col-md-4">
-			<h2>Heading</h2>
-			<p>ABC</p>
+			<h2>HTML</h2>
+			<p>=+_+</p>
 			<p>
 				<a class="btn btn-default" href="#" role="button">View details</a>
 			</p>
 		</div>
 	</div>
-
-
 	<hr>
 	<footer>
-		<p>&copy; Mkyong.com 2015</p>
+		<p>&copy; oldbiwang.cn</p>
 	</footer>
 </div>
 
