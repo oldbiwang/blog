@@ -10,9 +10,9 @@ $ git clone https://github.com/oldbiwang/blog.git
 ###### 2. 运行
 $ gradle jettyRun
 ``` bash
-Access http://localhost:8080/blog,点击login按钮
+Access http://localhost:8080/blog,点击login按钮进入登陆界面
 ```
-##### 3. 直接访问
+##### 3. 或者直接访问登陆界面
 ``` bash
 http://localhost:8080/blog/login
 ```
